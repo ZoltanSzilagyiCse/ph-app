@@ -1,0 +1,9 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image_view_list_item_smile"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="?android:attr/selectableItemBackground"
+    android:contentDescription="@string/smile"
+    android:minWidth="33dp"
+    android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+    android:paddingRight="@dimen/material_component_cards_action_button_row_padding" />

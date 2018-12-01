@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sl_selectable_background"
+        android:clipToPadding="false"
+        android:descendantFocusability="blocksDescendants"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:foreground="?android:selectableItemBackground"
+        android:minHeight="?android:listPreferredItemHeight"
+        android:paddingTop="@dimen/material_component_cards_padding_from_edge_of_screen_to_card"
+        android:stateListAnimator="@animator/list_selection">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_list_item_comment_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_list_comment"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:selectableItemBackground"
+                android:contentDescription="@string/avatar"
+                app:srcCompat="@drawable/vd_account_circle"
+                app:tint="?android:attr/textColorPrimary" />
+
+            <hu.sherad.hos.ui.widget.RichTextView
+                android:id="@+id/text_view_list_comment_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="?android:selectableItemBackground"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="@dimen/text_size_caption"
+                android:visibility="gone"
+                tools:text="Lelkes Újonc"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_list_item_comment_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/view_list_item_comment_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/material_component_dialogs_padding_around_buttons"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:tint="@color/material_red_500"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_brightness_1"
+                tools:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_list_item_comment_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/material_component_dialogs_padding_around_buttons"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:tint="@color/accent"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_brightness_1"
+                tools:visibility="visible" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_list_item_comment_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:background="?android:selectableItemBackgroundBorderless"
+                app:srcCompat="@drawable/vd_dots_vertical"
+                app:tint="?android:attr/textColorPrimary" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_list_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_list_comment_signature"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical|end"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+            android:textAppearance="@style/TextAppearance.Timestamp"
+            tools:text="9 ÓRÁJA" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_list_comment_signature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_list_comment"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:textColorHighlight="@color/accent_with_alpha"
+            android:textColorLink="@color/link"
+            android:textSize="@dimen/text_size_caption"
+            android:textStyle="italic"
+            tools:text="Aláírás" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout_list_item_comment_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/linear_layout_list_item_comment_options"
+            android:layout_toEndOf="@+id/linear_layout_list_item_comment_image"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <hu.sherad.hos.ui.widget.AuthorTextView
+                    android:id="@+id/text_view_list_comment_header_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:lines="1"
+                    android:textAppearance="@style/TextAppearance.Author"
+                    android:textColor="@color/text_view_comment"
+                    tools:text="Arcanus" />
+
+                <hu.sherad.hos.ui.widget.AuthorTextView
+                    android:id="@+id/text_view_list_comment_header_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:lines="1"
+                    android:textAppearance="@style/TextAppearance.Author"
+                    android:textColor="@color/text_view_comment"
+                    tools:text="1460" />
+
+            </LinearLayout>
+
+            <hu.sherad.hos.ui.widget.AuthorTextView
+                android:id="@+id/text_view_list_comment_header_quote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="  ❯  "
+                android:textAppearance="@style/TextAppearance.Author"
+                android:textColor="@color/text_view_comment"
+                android:visibility="gone"
+                tools:ignore="HardcodedText"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <hu.sherad.hos.ui.widget.AuthorTextView
+                    android:id="@+id/text_view_list_comment_header_quote_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:lines="1"
+                    android:textAppearance="@style/TextAppearance.Author"
+                    android:textColor="@color/text_view_comment"
+                    android:visibility="gone"
+                    tools:text="ABC123"
+                    tools:visibility="visible" />
+
+                <hu.sherad.hos.ui.widget.AuthorTextView
+                    android:id="@+id/text_view_list_comment_header_quote_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:lines="1"
+                    android:textAppearance="@style/TextAppearance.Author"
+                    android:textColor="@color/text_view_comment"
+                    android:visibility="gone"
+                    tools:text="14257"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <hu.sherad.hos.ui.widget.RichTextView
+            android:id="@+id/text_view_list_comment"
+            style="@style/TextAppearance.Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_layout_list_item_comment_image"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:textColor="@color/text_view_comment"
+            android:textColorHighlight="@color/accent_with_alpha"
+            android:textColorLink="@color/link"
+            android:textSize="@dimen/text_size_body"
+            tools:text="@string/lorem_ipsum" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

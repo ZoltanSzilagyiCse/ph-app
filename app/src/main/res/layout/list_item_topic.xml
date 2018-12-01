@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sl_selectable_background"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+    android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+    android:stateListAnimator="@animator/list_selection"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <hu.sherad.hos.ui.widget.RichTextView
+        android:id="@+id/btn_util_list_item_topic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/sl_circle"
+        android:clickable="false"
+        android:enabled="false"
+        android:gravity="center"
+        android:textColor="@color/icons"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_util_list_item_topic_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_util_list_item_topic_title"
+        tools:text="T" />
+
+    <hu.sherad.hos.ui.widget.RichTextView
+        android:id="@+id/tv_util_list_item_topic_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/material_component_lists_icon_left_padding"
+        android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_supporting_text_top_padding"
+        android:textColor="?android:attr/textColorPrimary"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/btn_util_list_item_topic"
+        app:layout_constraintRight_toLeftOf="@+id/tv_list_item_topic_badge"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Topik cím" />
+
+    <hu.sherad.hos.ui.widget.RichTextView
+        android:id="@+id/tv_list_item_topic_badge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/material_component_lists_icon_left_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:textAppearance="@style/TextAppearance.Timestamp"
+        android:textColor="@color/material_red_500"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_util_list_item_topic_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="23"
+        tools:visibility="visible" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/image_view_list_item_topic_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="@dimen/material_component_dialogs_padding_around_buttons"
+        android:scaleType="centerInside"
+        android:tint="?android:attr/textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_util_list_item_topic_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_util_list_item_topic_title"
+        app:srcCompat="@drawable/vd_content_copy"
+        app:tint="@color/tint_enabled_light_bg"
+        tools:visibility="visible" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/image_view_list_item_topic_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="@dimen/material_component_dialogs_padding_around_buttons"
+        android:scaleType="centerInside"
+        android:tint="?android:attr/textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/image_view_list_item_topic_copy"
+        app:layout_constraintTop_toBottomOf="@+id/tv_util_list_item_topic_title"
+        app:srcCompat="@drawable/sl_alarm"
+        app:tint="@color/tint_enabled_light_bg"
+        tools:visibility="visible" />
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/image_view_list_item_topic_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="@dimen/material_component_dialogs_padding_around_buttons"
+        android:scaleType="centerInside"
+        android:tint="?android:attr/textColorPrimary"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/image_view_list_item_topic_notification"
+        app:layout_constraintTop_toBottomOf="@+id/tv_util_list_item_topic_title"
+        app:srcCompat="@drawable/vd_delete"
+        app:tint="@color/tint_enabled_light_bg"
+        tools:visibility="visible" />
+
+    <hu.sherad.hos.ui.widget.RichTextView
+        android:id="@+id/text_view_list_item_message_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="end"
+        android:textColor="?android:attr/textColorSecondary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_list_item_topic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/image_view_list_item_topic_delete"
+        app:layout_constraintTop_toBottomOf="@+id/tv_util_list_item_topic_title"
+        tools:text="2018.03.12 12:32"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>

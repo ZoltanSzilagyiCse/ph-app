@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/fragmentInit">
+
+    <fragment
+        android:id="@+id/fragmentInit"
+        android:name="hu.sherad.hos.ui.fragments.init.FragmentInit"
+        android:label="flow_fragment_init"
+        tools:layout="@layout/flow_fragment_init">
+        <action
+            android:id="@+id/action_fragmentInit_to_fragmentWelcome"
+            app:destination="@id/fragmentInitWelcome"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentInit_to_fragmentLoginEntry"
+            app:destination="@id/fragmentLoginEntry"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentInit_to_fragmentInitFinish"
+            app:destination="@id/fragmentInitFinish"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInitWelcome"
+        android:name="hu.sherad.hos.ui.fragments.init.FragmentInitWelcome"
+        android:label="flow_fragment_init_welcome"
+        tools:layout="@layout/flow_fragment_init_welcome">
+        <action
+            android:id="@+id/action_fragmentInitWelcome_to_fragmentLoginEntry"
+            app:destination="@id/fragmentLoginEntry"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragmentWelcome_to_fragmentRegistrationEntry"
+            app:destination="@id/fragmentRegistrationEntry"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentLoginEntry"
+        android:name="hu.sherad.hos.ui.fragments.login.FragmentLoginEntry"
+        android:label="flow_fragment_login_entry"
+        tools:layout="@layout/flow_fragment_login_entry">
+        <action
+            android:id="@+id/action_fragmentLoginEntry_to_fragmentInitFinish"
+            app:destination="@id/fragmentInitFinish"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegistrationEntry"
+        android:name="hu.sherad.hos.ui.fragments.register.FragmentRegistrationEntry"
+        android:label="flow_fragment_register_entry"
+        tools:layout="@layout/flow_fragment_register_entry">
+        <action
+            android:id="@+id/action_fragmentRegistrationEntry_to_fragmentInitFinish"
+            app:destination="@id/fragmentInitFinish"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInitFinish"
+        android:name="hu.sherad.hos.ui.fragments.init.FragmentInitFinish"
+        android:label="flow_fragment_init_finish"
+        tools:layout="@layout/flow_fragment_init_finish" />
+</navigation>

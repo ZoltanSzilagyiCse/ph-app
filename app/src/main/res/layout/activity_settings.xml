@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/colorBackground">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_activity_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_activity_settings"
+            style="@style/Widget.PH.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:subtitleTextColor="@color/icons"
+            app:titleTextColor="@color/icons" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_activity_settings" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/frame_layout_activity_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar_activity_settings" />
+
+</RelativeLayout>

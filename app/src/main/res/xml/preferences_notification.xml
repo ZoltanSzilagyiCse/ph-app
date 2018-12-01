@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Értesítés">
+
+        <Preference
+            android:key="preferences_notification_refresh"
+            android:title="Frissítés gyakorisága" />
+
+        <RingtonePreference
+            android:key="preferences_notification_sound"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:title="Értesítés hanggal" />
+
+        <Preference
+            android:key="preferences_notification_topics_favourite"
+            android:summary="Válaszd ki, mely topikokról szeretnél értesítést kapni"
+            android:title="@string/notification_preferences_topics_favourite" />
+
+        <Preference
+            android:key="preferences_notification_topics_commented"
+            android:summary="Válaszd ki, mely topikokról szeretnél értesítést kapni"
+            android:title="@string/notification_preferences_topics_commented" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preferences_notification_switch_messages"
+            android:summary="@string/notification_preferences_message_summary"
+            android:title="@string/notification_preferences_message" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preferences_notification_switch_mobile_data"
+            android:summary="Új hozzászólást/üzenetet ellenőrzése Mobil kapcsolattal"
+            android:title="Mobilnet használata" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="172dp">
+
+    <View
+        android:id="@+id/view_util_drawer_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/material_layout_vertical_spacing_status_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_below="@+id/view_util_drawer_header"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_util_drawer_header_avatar"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:contentDescription="@string/avatar"
+            android:elevation="2dp"
+            android:focusable="true"
+            android:src="@drawable/vd_account_circle" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_util_drawer_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="@dimen/material_component_button_text_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_button_text_left_and_right_padding"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            tools:text="Arcanus" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_util_drawer_header_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="@dimen/material_component_button_text_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_button_text_left_and_right_padding"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="@dimen/text_size_caption"
+            tools:text="zoltan.szilagyi.cse@gmail.com" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorDivider" />
+
+</RelativeLayout>

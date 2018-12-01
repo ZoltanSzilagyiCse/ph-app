@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+    android:layout_marginTop="@dimen/material_component_cards_top_and_bottom_padding"
+    android:layout_marginEnd="@dimen/material_component_cards_left_and_right_padding"
+    android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+        android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                android:gravity="center"
+                android:text="@string/quick_personalization"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_medium" />
+
+            <LinearLayout
+                android:id="@+id/view_login_start_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/start_page"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="@dimen/text_size_sub_heading" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView_login_finish_start_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="-" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorDivider" />
+
+            <LinearLayout
+                android:id="@+id/view_login_finish_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/theme"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="@dimen/text_size_sub_heading" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView_login_finish_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:textColor="?android:attr/textColorSecondary"
+                    tools:text="-" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorDivider" />
+
+            <RelativeLayout
+                android:id="@+id/view_login_finish_auto_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground">
+
+
+                <Switch
+                    android:id="@+id/switch_login_finish_auto_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/text_view_login_finish_auto_scroll"
+                    android:layout_alignBottom="@+id/text_view_login_finish_auto_scroll_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:gravity="center" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_login_finish_auto_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/switch_login_finish_auto_scroll"
+                    android:paddingTop="@dimen/material_component_cards_space_between_cards"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/auto_scroll_new_comment"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_login_finish_auto_scroll_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_login_finish_auto_scroll"
+                    android:layout_toStartOf="@id/switch_login_finish_auto_scroll"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/auto_scroll_new_comment_description"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorDivider" />
+
+            <RelativeLayout
+                android:id="@+id/view_login_finish_information_collecting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground">
+
+                <Switch
+                    android:id="@+id/switch_login_finish_information_collecting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@id/text_view_login_finish_information_collecting"
+                    android:layout_alignBottom="@+id/text_view_login_finish_information_collecting_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:gravity="center" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_login_finish_information_collecting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/switch_login_finish_information_collecting"
+                    android:paddingTop="@dimen/material_component_cards_space_between_cards"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/information_collecting"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_login_finish_information_collecting_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_login_finish_information_collecting"
+                    android:layout_toStartOf="@id/switch_login_finish_information_collecting"
+                    android:paddingBottom="@dimen/material_component_cards_space_between_cards"
+                    android:text="@string/information_collecting_description"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/material_component_cards_space_between_cards"
+                android:weightSum="2">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/button_login_finish_import_settings"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/import_settings" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/button_login_finish_done"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/done" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.v7.widget.CardView>

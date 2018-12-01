@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:constantSize="true" android:enterFadeDuration="120" android:exitFadeDuration="120">
+
+    <item android:state_activated="true">
+        <color android:color="?attr/colorListItemBackground" />
+    </item>
+    <item>
+        <color android:color="?attr/colorListItemBackground" />
+    </item>
+
+</selector>

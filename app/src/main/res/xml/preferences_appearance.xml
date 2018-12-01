@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Viselkedés">
+
+        <Preference
+            android:key="preferences_appearance_start_fragment"
+            android:title="@string/start_page" />
+
+        <Preference
+            android:key="preferences_appearance_theme"
+            android:title="@string/theme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Topik/Üzenet">
+
+        <Preference
+            android:key="preference_appearance_comment_text_size"
+            android:title="Üzenet/Hozzászólás szövegméret" />
+
+        <Preference
+            android:key="preferences_appearance_swipe_refresh_comments"
+            android:title="Lehúzva frissítés" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preferences_appearance_switch_time"
+            android:summary="Ha be van kapcsolva akkor abszolút, egyébként relatív időbélyeg jelenik meg"
+            android:title="Időbélyeg" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:dependency="preferences_appearance_switch_time"
+            android:key="preferences_appearance_switch_time_seconds"
+            android:summary="Másodperceket is megjeleníti"
+            android:title="Pontosabb idő" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preferences_appearance_switch_list_inc"
+            android:summary="Növekvő sorrendben jelennek meg az üzenetek/hozzászólások"
+            android:title="Fordított sorrend" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preferences_appearance_switch_off_comment"
+            android:summary="Ha be van kapcsolva, akkor nem jeleníti meg az OFF hozzászólásokat"
+            android:title="Off hozzászólás elrejtése" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preference_appearance_switch_floating_button"
+            android:summary="Ha nincs megjelenítve a 'További lehetőségek' menü alatt elérhető"
+            android:title="Lebegő gomb megjelenítése" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preference_appearance_switch_signature"
+            android:summary="Üzenet/Hozzászólásnál a felhasználó aláírása látható lesz"
+            android:title="Aláírás megjelenítése" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preference_appearance_switch_rank"
+            android:summary="Hozzászólásnál a felhasználó rangja látható lesz"
+            android:title="Rang megjelenítése" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="preferences_appearance_switch_scroll_new_comment"
+            android:summary="@string/auto_scroll_new_comment_description"
+            android:title="@string/auto_scroll_new_comment" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Új hozzászólás/üzenet írása">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="preference_appearance_switch_new_comment_options_hide"
+            android:summary="Smile vagy BB kód kiválasztásánál automatikusan összecsukódik a panel"
+            android:title="Panel auto összecsukása" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

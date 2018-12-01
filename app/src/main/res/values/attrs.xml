@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PH">
+        <attr name="colorListItemBackground" format="color" />
+        <attr name="colorEditTextBottomLine" format="color" />
+        <attr name="colorEditTextLabelText" format="color" />
+        <attr name="colorEditTextInputText" format="color" />
+        <attr name="colorDivider" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="menu_comment_options_send_reply" type="id" />
+    <item name="menu_comment_options_send_private" type="id" />
+    <item name="menu_comment_options_edit" type="id" />
+    <item name="menu_comment_options_copy" type="id" />
+
+    <item name="menu_topic_options_refresh" type="id" />
+    <item name="menu_topic_options_favourites" type="id" />
+    <item name="menu_topic_options_notification" type="id" />
+    <item name="menu_topic_options_topic_overall" type="id" />
+    <item name="menu_topic_options_new" type="id" />
+    <item name="menu_topic_options_topic_url" type="id" />
+
+    <item name="menu_new_comment_options" type="id" />
+    <item name="menu_new_comment_send" type="id" />
+    <item name="menu_new_comment_off_topic" type="id" />
+    <item name="menu_new_comment_show_quote" type="id" />
+    <item name="menu_new_comment_help" type="id" />
+
+    <item name="menu_explore_search" type="id" />
+
+    <item name="menu_image_save" type="id" />
+    <item name="menu_image_url" type="id" />
+
+    <item name="menu_search_filter" type="id" />
+
+    <item name="menu_favourites_delete" type="id" />
+    <item name="menu_favourites_notification" type="id" />
+    <item name="menu_favourites_copy_link" type="id" />
+    <item name="menu_favourites_sort" type="id" />
+
+    <item name="menu_commented_topics_delete" type="id" />
+    <item name="menu_commented_topics_copy_link" type="id" />
+    <item name="menu_commented_topics_sort" type="id" />
+
+</resources>

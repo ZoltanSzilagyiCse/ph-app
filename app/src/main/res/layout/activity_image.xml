@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout_activity_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.ActivityImage">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photo_view_activity_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        tools:src="@drawable/vd_image" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout_activity_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            app:elevation="0px">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_activity_image"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:elevation="0px"
+                app:subtitleTextColor="@android:color/white"
+                app:titleTextColor="@android:color/white" />
+
+        </android.support.design.widget.AppBarLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

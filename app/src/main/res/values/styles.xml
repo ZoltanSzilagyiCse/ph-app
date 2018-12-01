@@ -1,0 +1,154 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="PH" parent="Theme.Design">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="PHLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Default -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+        <item name="android:colorBackground">@color/md_background_light</item>
+        <item name="android:colorControlNormal">@color/primary_text_light</item>
+        <item name="android:textColorPrimary">@color/primary_text_light</item>
+        <item name="android:textColorSecondary">@color/secondary_text_light</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/disabled_text_light</item>
+        <item name="android:textColorHint">@color/disabled_text_light</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/md_background_light</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+        <!-- Custom -->
+        <item name="colorListItemBackground">@color/list_item_background_light</item>
+        <item name="colorEditTextBottomLine">@color/edit_text_bottom_line_light</item>
+        <item name="colorEditTextLabelText">@color/edit_text_label_text_light</item>
+        <item name="colorEditTextInputText">@color/edit_text_input_text_light</item>
+        <item name="colorDivider">@color/divider_light</item>
+    </style>
+
+    <style name="PHDark" parent="Theme.AppCompat.NoActionBar">
+        <!-- Default -->
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+        <item name="android:colorBackground">@color/md_background_dark</item>
+        <item name="android:colorControlNormal">@color/primary_text_dark</item>
+        <item name="android:textColorPrimary">@color/primary_text_dark</item>
+        <item name="android:textColorSecondary">@color/secondary_text_dark</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/disabled_text_dark</item>
+        <item name="android:textColorHint">@color/disabled_text_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/md_background_dark</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+        <!-- Custom -->
+        <item name="colorListItemBackground">@color/list_item_background_dark</item>
+        <item name="colorEditTextBottomLine">@color/edit_text_bottom_line_dark</item>
+        <item name="colorEditTextLabelText">@color/edit_text_label_text_dark</item>
+        <item name="colorEditTextInputText">@color/edit_text_input_text_dark</item>
+        <item name="colorDivider">@color/divider_dark</item>
+    </style>
+
+    <style name="PHDark.Black">
+        <!-- Default -->
+        <item name="android:colorPrimary">@color/md_background_black</item>
+        <item name="android:colorPrimaryDark">@color/md_background_black</item>
+        <item name="android:colorBackground">@color/md_background_black</item>
+        <item name="android:navigationBarColor">@color/md_background_black</item>
+        <item name="android:windowBackground">@color/md_background_black</item>
+        <!-- Custom -->
+        <item name="colorListItemBackground">@color/list_item_background_black</item>
+        <item name="colorEditTextBottomLine">@color/edit_text_bottom_line_dark</item>
+    </style>
+
+    <style name="PH.Image" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:fontFamily">@font/product_sans</item>
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@color/scrim</item>
+        <item name="android:navigationBarColor">@color/scrim</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="PH.Dialog" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorBackground">@color/md_background_light</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:textColorHint">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="android:windowBackground">@color/md_background_light</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="Widget.PH" parent="android:Widget">
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="Widget.PH.Toolbar">
+        <item name="android:titleTextAppearance">
+            @style/TextAppearance.Material.Widget.ActionBar.Title.PH
+        </item>
+        <item name="android:background">?android:colorPrimary</item>
+        <item name="android:theme">@android:style/ThemeOverlay.Material.Dark</item>
+        <item name="android:colorControlNormal">@android:color/white</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="subtitleTextColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.Material.Widget.ActionBar.Title.PH" parent="@android:style/TextAppearance.Material.Widget.ActionBar.Title">
+        <!--<item name="textColor">@color/icons</item>-->
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.Comment" parent="@android:style/TextAppearance.Material.Body1">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.Timestamp" parent="@android:style/TextAppearance.Material.Caption">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.Author" parent="@android:style/TextAppearance.Material.Caption">
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.FloatLabelHint" parent="@android:style/TextAppearance.Material.Caption">
+        <item name="android:textColor">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+    <style name="TextAppearance.TextInput" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">?android:attr/textColorPrimaryDisableOnly</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">?attr/colorEditTextLabelText</item>
+        <item name="colorControlActivated">?attr/colorEditTextLabelText</item>
+        <item name="android:fontFamily">@font/product_sans</item>
+    </style>
+
+</resources>

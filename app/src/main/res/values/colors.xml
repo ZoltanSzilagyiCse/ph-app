@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default Colors - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="primary">#212121</color>
+    <color name="primary_dark">#000000</color>
+    <color name="accent">@color/material_amber_500</color>
+
+    <!-- Text Color - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="primary_text_light">#DE000000</color>
+    <color name="primary_text_dark">#FFFFFFFF</color>
+    <color name="secondary_text_light">#8A000000</color>
+    <color name="secondary_text_dark">#B3FFFFFF</color>
+    <color name="disabled_text_light">#61000000</color>
+    <color name="disabled_text_dark">#80FFFFFF</color>
+
+    <!-- Background Color - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="md_background_light">#FAFAFA</color>
+    <color name="md_background_dark">#303030</color>
+    <color name="md_background_black">#000000</color>
+
+    <!-- List Item Colors - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="list_item_background_light">#FFFFFF</color>
+    <color name="list_item_background_dark">#424242</color>
+    <color name="list_item_background_black">#000000</color>
+
+    <!-- Divider Colors - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="divider_light">#1F000000</color>
+    <color name="divider_dark">#1FFFFFFF</color>
+
+    <!-- EditText Colors - OFFICIAL MATERIAL DESIGN GUIDE -->
+    <color name="edit_text_bottom_line_light">#6B000000</color>
+    <color name="edit_text_bottom_line_dark">#B3000000</color>
+    <color name="edit_text_label_text_light">#8A000000</color>
+    <color name="edit_text_label_text_dark">#80000000</color>
+    <color name="edit_text_input_text_light">#DE000000</color>
+    <color name="edit_text_input_text_dark">#FFFFFFFF</color>
+
+    <color name="icons">@color/material_light_white</color>
+    <color name="ripple_fab">#40808080</color>
+    <color name="scrim">#99323232</color>
+    <color name="accent_with_alpha">#B3FFC107</color>
+
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="hu.sherad.hos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".data.api.ph.PHApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/PH">
+
+        <!-- ENTER YOUR FABRIC KEY HERE -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="" />
+
+        <activity
+            android:name=".ui.activities.ActivityHome"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.ActivityInit"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <activity-alias
+            android:name=".Launcher"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:targetActivity=".ui.activities.ActivityInit">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity-alias>
+
+        <activity
+            android:name=".ui.activities.ActivitySearch"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="com.google.android.gms.actions.SEARCH_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <activity
+            android:name=".ui.activities.ActivityComments"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="prohardver.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="m.prohardver.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="mobilarena.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="m.mobilarena.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="itcafe.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="m.itcafe.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="gamepod.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="m.gamepod.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="logout.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="m.logout.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+                <data
+                    android:host="fototrend.hu"
+                    android:pathPrefix="/tema"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.ActivityUser"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.ActivitySettings"
+            android:exported="false"
+            android:parentActivityName=".ui.activities.ActivityHome"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.ActivitySettingsLoader"
+            android:excludeFromRecents="true"
+            android:label="Biztonsági mentés visszaállítása"
+            android:launchMode="singleTask"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:screenOrientation="portrait"
+            android:theme="@style/PH.Dialog">
+
+            <intent-filter>
+                <data
+                    android:mimeType="application/vnd.phbakcup"
+                    android:pathPattern=".*\\.phbakcup"
+                    android:scheme="content"
+                    tools:ignore="AppLinkUrlError" />
+                <data
+                    android:mimeType="application/phbakcup"
+                    android:pathPattern=".*\\.phbakcup"
+                    android:scheme="content" />
+                <data
+                    android:mimeType="application/octet-stream"
+                    android:pathPattern=".*\\.phbakcup"
+                    android:scheme="content" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <intent-filter>
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\.phbakcup"
+                    android:scheme="file" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.ActivityImage"
+            android:exported="true"
+            android:theme="@style/PH.Image" />
+
+        <activity
+            android:name=".ui.activities.ActivityNewComment"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".receivers.PHReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="hu.sherad.hos.action.ACTION_NOTIFICATION_CHECK" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

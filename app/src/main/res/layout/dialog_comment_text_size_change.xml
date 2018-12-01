@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/text_view_dialog_comment_text_size_change"
+        style="@style/TextAppearance.Comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:maxLines="9"
+        android:scrollbars="vertical"
+        android:text="@string/lorem_ipsum"
+        android:textColorHighlight="@color/accent_with_alpha"
+        android:textColorLink="@color/link"
+        android:textSize="@dimen/text_size_body" />
+
+    <com.appyvet.materialrangebar.RangeBar
+        android:id="@+id/range_bar_dialog_comment_text_size_change"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:mrb_connectingLineColor="@color/accent"
+        app:mrb_pinColor="@color/accent"
+        app:mrb_pinRadius="15dp"
+        app:mrb_rangeBar="false"
+        app:mrb_selectorColor="@color/accent"
+        app:mrb_temporaryPins="false"
+        app:mrb_tickEnd="200"
+        app:mrb_tickHeight="0px"
+        app:mrb_tickStart="90" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+        android:text="Csúsztasd el, hogy változtasd a szöveg méretét!"
+        android:textColor="?android:attr/textColorSecondary"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

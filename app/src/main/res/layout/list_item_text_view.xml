@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/text_view_util"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textStyle="bold"
+        tools:text="Szöveg" />
+
+</RelativeLayout>

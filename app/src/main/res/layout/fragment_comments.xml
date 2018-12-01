@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_activity_comments"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_fragment_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/sl_thumb"
+        app:fastScrollHorizontalTrackDrawable="@drawable/sl_line"
+        app:fastScrollVerticalThumbDrawable="@drawable/sl_thumb"
+        app:fastScrollVerticalTrackDrawable="@drawable/sl_line"
+        app:layoutManager="hu.sherad.hos.ui.recyclerview.WrapContentLinearLayoutManager" />
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="preferences_home_appearance"
+        android:summary="Itt tudod személyre szabni az alkalmazás kinézetét, viselkedését"
+        android:title="@string/appearance" />
+
+    <Preference
+        android:key="preferences_home_notifications"
+        android:summary="Ezek a funkciók csak akkor elérhetőek, ha be vagy jelentkezve!"
+        android:title="@string/notification" />
+
+    <Preference
+        android:key="preferences_home_other"
+        android:summary="Egyéb funkciók (pl: ADB Debug)"
+        android:title="Egyéb" />
+
+    <Preference
+        android:key="preference_home_user_credentials"
+        android:summary="Felhasználói fiókod adatai"
+        android:title="Felhasználó adatok" />
+
+</PreferenceScreen>

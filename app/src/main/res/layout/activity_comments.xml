@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout_activity_comments_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fitsSystemWindows="true"
+    android:transitionGroup="false"
+    tools:context=".ui.activities.ActivityComments">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout_activity_comments"
+            style="@style/Widget.PH.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/actionBarSize"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_activity_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:attr/actionBarSize"
+                android:title=""
+                app:layout_scrollFlags="scroll|snap|enterAlways"
+                app:titleTextColor="@color/icons">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_comments_title"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="14dp"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/material_layout_app_bar_horizontal_padding"
+                    android:textColor="@android:color/white"
+                    tools:text="Topik címe" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_activity_comments_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="150">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/image_view_activity_comments_first_page"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/first"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/vd_arrow_first"
+                    app:tint="@color/tint_enabled_dark_bg" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/image_view_activity_comments_prev_page"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/next"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/vd_arrow_left"
+                    app:tint="@color/tint_enabled_dark_bg" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_comments_current_position"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    tools:text="100 / 256" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/image_view_activity_comments_next_page"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/next"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/vd_arrow_right"
+                    app:tint="@color/tint_enabled_dark_bg" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/image_view_activity_comments_last_page"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@string/last"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/vd_arrow_last"
+                    app:tint="@color/tint_enabled_dark_bg" />
+
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinator_layout_activity_comments_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorPrimary"
+            android:elevation="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_activity_comments_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                app:layoutManager="hu.sherad.hos.ui.recyclerview.WrapContentLinearLayoutManager"
+                tools:visibility="visible" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_activity_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <hu.sherad.hos.ui.widget.FloatingActionButton
+            android:id="@+id/img_btn_activity_comments_fab"
+            android:layout_width="@dimen/material_component_floating_action_button_size"
+            android:layout_height="@dimen/material_component_floating_action_button_size"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/material_component_floating_action_button_margin"
+            android:layout_marginBottom="@dimen/material_component_floating_action_button_margin"
+            android:background="@drawable/ripple_fab"
+            android:contentDescription="@null"
+            android:elevation="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/vd_plus"
+            android:stateListAnimator="@animator/raise"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/view_activity_comments_scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/scrim"
+            android:transitionGroup="false"
+            android:visibility="gone" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.design.widget.CoordinatorLayout>

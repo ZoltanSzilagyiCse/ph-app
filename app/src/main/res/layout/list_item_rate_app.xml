@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sl_selectable_background"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:foreground="?android:selectableItemBackground"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:stateListAnimator="@animator/list_selection">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/img_card_main"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_card_rate_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingTop="@dimen/material_component_cards_primary_title_top_padding"
+                android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+                android:text="@string/rateApp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_sub_heading"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_card_rate_app_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+                android:text="@string/rateAppContent"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="@dimen/text_size_body" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_card_rate_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/material_component_button_text_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_button_text_left_and_right_padding"
+                android:weightSum="5">
+
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/material_component_cards_action_button_row_padding"
+                    android:src="@drawable/vd_star_outline"
+                    android:tint="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/material_component_cards_action_button_row_padding"
+                    android:src="@drawable/vd_star_outline"
+                    android:tint="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/material_component_cards_action_button_row_padding"
+                    android:src="@drawable/vd_star_outline"
+                    android:tint="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/material_component_cards_action_button_row_padding"
+                    android:src="@drawable/vd_star_outline"
+                    android:tint="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/material_component_cards_action_button_row_padding"
+                    android:src="@drawable/vd_star_outline"
+                    android:tint="?android:attr/textColorPrimary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_card_main"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/colorPrimary"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

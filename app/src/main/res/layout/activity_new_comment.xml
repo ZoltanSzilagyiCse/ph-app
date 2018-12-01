@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout_activity_new_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activities.ActivityNewComment">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout_activity_new_comment"
+        style="@style/Widget.PH.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_activity_new_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/actionBarSize"
+            android:title=""
+            app:titleTextColor="@color/icons">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_new_comment_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/material_layout_app_bar_horizontal_padding"
+                android:textColor="@android:color/white"
+                tools:text="Új hozzászólás írása" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_activity_send_comment_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/colorPrimary"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/material_component_floating_action_button_size"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="B"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_italic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="I"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        android:textStyle="italic"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_underline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="U"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_through"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="T"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="Off"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="LINK"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="Kép"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="{ }"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/text_view_dialog_send_comment_bb_monospace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/material_component_cards_action_button_row_padding"
+                        android:paddingRight="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="Monospace"
+                        android:textAllCaps="true"
+                        android:textColor="@color/icons"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_activity_new_comment_smiles"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/material_component_floating_action_button_size"
+                android:fadeScrollbars="false"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@+id/edit_text_dialog_send_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="top|start"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:fadeScrollbars="false"
+        android:gravity="start|top"
+        android:hint="Ide írj..."
+        android:inputType="textMultiLine|textCapSentences"
+        android:lineSpacingMultiplier="1.2"
+        android:minLines="1"
+        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="HardcodedText,LabelFor" />
+
+</android.support.design.widget.CoordinatorLayout>

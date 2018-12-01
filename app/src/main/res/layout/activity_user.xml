@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_frame_activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionGroup="false"
+    tools:context=".ui.activities.ActivityUser">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view_activity_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:elevation="2dp"
+        android:transitionGroup="false">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/img_activity_user"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/material_component_cards_top_and_bottom_padding"
+                android:contentDescription="@string/avatar"
+                android:elevation="2dp"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/vd_account_circle"
+                app:tint="?android:attr/textColorPrimary" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_activity_user"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingTop="@dimen/material_component_cards_primary_title_top_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:text="@string/loading"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_activity_user"
+                tools:text="Arcanus" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_rank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_view_activity_user_name"
+                android:gravity="center_horizontal"
+                android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="@dimen/text_size_body"
+                android:textStyle="italic"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_name"
+                tools:text="Fanatikus tag" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_comments_detailed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingTop="@dimen/material_component_cards_primary_title_top_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+                android:text="@string/comments"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_sub_heading"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_rank" />
+
+            <LinearLayout
+                android:id="@+id/linear_activity_user_comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:weightSum="4"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_comments_detailed">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_comments_professional"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="@string/professionalCommentV" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_comments_social"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="@string/socialCommentV" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_comments_market"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="@string/marketCommentV" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_blogs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="@string/blogsV" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+                android:text="@string/activity"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_sub_heading"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_signature_detailed" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_activity_user_activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_activity">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_activity_started"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:text="Regisztrált:\n2016. okt. 9." />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/text_view_activity_user_activity_last"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="@dimen/text_size_body"
+                    tools:layout_editor_absoluteY="535dp"
+                    tools:text="Utolsó feltünés:\n1 órával ezelőtt" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_items"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingTop="@dimen/material_component_cards_primary_title_top_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+                android:text="@string/items"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_sub_heading"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_activity_user_comments" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_items_detailed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_items"
+                tools:text="Oneplus One" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_signature"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+                android:text="@string/signature"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/text_size_sub_heading"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_items_detailed" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_view_activity_user_signature_detailed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="@dimen/text_size_body"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_activity_user_signature"
+                tools:text="Knowledge is Power" />
+
+            <Button
+                android:id="@+id/button_activity_user_send_private"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/material_layout_keylines_screen_edge_margin"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                android:backgroundTint="@color/login_button"
+                android:enabled="false"
+                android:text="@string/send_private_message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_activity_user_activities" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

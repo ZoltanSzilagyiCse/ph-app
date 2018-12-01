@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout_activity_search_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activities.ActivitySearch">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout_activity_search"
+        style="@style/Widget.PH.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:minHeight="?android:attr/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_activity_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/actionBarSize"
+            app:titleTextColor="@color/icons" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ViewSwitcher
+        android:id="@+id/view_switcher_activity_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:id="@+id/scroll_view_activity_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                        android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+                        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                        android:paddingBottom="@dimen/material_component_cards_supporting_text_top_padding"
+                        android:text="Keresés Típusa"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="@dimen/text_size_body" />
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/spinner_activity_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="0dp"
+                        android:layout_weight="1"
+                        android:entries="@array/topic_search_entries"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                        android:prompt="@array/topic_search_values" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_activity_search_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginTop="@dimen/material_component_cards_top_and_bottom_padding"
+                    android:layout_marginEnd="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                    app:cardBackgroundColor="?attr/colorListItemBackground">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                        android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                        android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                        android:theme="@style/TextAppearance.TextInput"
+                        app:errorEnabled="false"
+                        app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/edit_text_activity_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:hint="Keresendő kifejezés"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:textColor="?attr/colorEditTextInputText" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view_activity_search_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginTop="@dimen/material_component_cards_top_and_bottom_padding"
+                    android:layout_marginEnd="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="?attr/colorListItemBackground"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:theme="@style/TextAppearance.TextInput"
+                            app:errorEnabled="false"
+                            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edit_text_activity_search_all"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="Tartalmazza ezen szavak mindegyikét"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:selectAllOnFocus="true"
+                                android:textColor="?attr/colorEditTextInputText" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?attr/colorDivider" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:theme="@style/TextAppearance.TextInput"
+                            app:errorEnabled="false"
+                            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edit_text_activity_search_exac"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+
+                                android:hint="Tartalmazza pontosan ezt a kifejezést"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="?attr/colorEditTextInputText" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?attr/colorDivider" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:theme="@style/TextAppearance.TextInput"
+                            app:errorEnabled="false"
+                            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edit_text_activity_search_some"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="Tartalmazza ezen szavak bármelyikét"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="?attr/colorEditTextInputText" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?attr/colorDivider" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:theme="@style/TextAppearance.TextInput"
+                            app:errorEnabled="false"
+                            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edit_text_activity_search_none"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="Ne tartalmazza ezen szavakat"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="?attr/colorEditTextInputText" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?attr/colorDivider" />
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+                            android:paddingBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                            android:theme="@style/TextAppearance.TextInput"
+                            app:errorEnabled="false"
+                            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/edit_text_activity_search_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="Szűrés felhasználó szerint"
+                                android:inputType="text"
+                                android:maxLines="1"
+                                android:textColor="?attr/colorEditTextInputText" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/button_activity_search_for"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginTop="@dimen/material_component_cards_top_and_bottom_padding"
+                    android:layout_marginEnd="@dimen/material_component_cards_left_and_right_padding"
+                    android:layout_marginBottom="@dimen/material_component_cards_top_and_bottom_padding"
+                    android:backgroundTint="@color/login_button"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/material_component_floating_action_button_size"
+                        android:gravity="center"
+                        android:padding="@dimen/material_component_cards_action_button_row_padding"
+                        android:text="@string/search"
+                        android:textAllCaps="true"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="@dimen/text_size_sub_heading"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_activity_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+    </ViewSwitcher>
+
+</android.support.design.widget.CoordinatorLayout>

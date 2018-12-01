@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sl_selectable_background"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:foreground="?android:selectableItemBackground"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:stateListAnimator="@animator/list_selection">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_list_img_text_view"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:src="@drawable/vd_image"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_list_img_text_view_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_list_img_text_view"
+            android:gravity="start"
+            android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingTop="@dimen/material_component_cards_top_and_bottom_padding"
+            android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@+id/img_list_img_text_view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cím" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_list_img_text_view_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_list_img_text_view_title"
+            android:layout_toEndOf="@+id/img_list_img_text_view"
+            android:gravity="start"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintLeft_toRightOf="@+id/img_list_img_text_view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_list_img_text_view_title"
+            tools:text="Tartalom" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_list_item_news_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical|end"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+            android:textAppearance="@style/TextAppearance.Timestamp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_list_img_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_list_img_text_view_content"
+            tools:text="9 ÓRÁJA" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Make a better solution for this.
+
+  The problem: ProgressBar height and the TextView (list_item_text_view.xml) height different,
+  so whenever in the RecyclerView remove the TextView and add the ProgressBar it scrolls a little bit.
+  That ain't looks good. That's why here I assume the ProgressBar top and bottom next to the TextView.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_view_util"
+        android:layout_alignBottom="@+id/text_view_util"
+        android:indeterminateTint="@color/accent"
+        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/text_view_util"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingTop="@dimen/material_component_cards_supporting_text_top_padding"
+        android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+        android:paddingBottom="@dimen/material_component_cards_supporting_text_bottom_padding"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textStyle="bold" />
+
+</RelativeLayout>

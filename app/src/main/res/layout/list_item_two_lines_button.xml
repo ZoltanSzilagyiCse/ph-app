@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sl_selectable_background"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:foreground="?android:selectableItemBackground"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:stateListAnimator="@animator/list_selection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_card_button_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingTop="@dimen/material_component_cards_primary_title_top_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingBottom="@dimen/material_component_cards_primary_title_bottom_padding"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/text_size_sub_heading"
+            android:textStyle="bold"
+            tools:text="Cím" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_card_button_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/material_component_cards_left_and_right_padding"
+            android:paddingEnd="@dimen/material_component_cards_left_and_right_padding"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="@dimen/text_size_body"
+            tools:text="Szöveg" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_view_card_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/material_component_floating_action_button_size"
+            android:layout_gravity="end|center_horizontal"
+            android:layout_margin="@dimen/material_layout_keylines_screen_edge_margin"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/material_component_cards_action_button_row_padding"
+            android:textAllCaps="true"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/text_size_sub_heading"
+            android:textStyle="bold"
+            tools:text="Gomb" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>REMOTE_CONFIG_MIN_VERSION</key>
+        <value>529</value>
+    </entry>
+    <entry>
+        <key>REMOTE_CONFIG_INFO</key>
+        <value />
+    </entry>
+</defaultsMap>
